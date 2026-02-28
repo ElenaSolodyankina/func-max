@@ -5,13 +5,11 @@ on:
     branches: ["new_workflow"]
 
 jobs:
-
   build:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
     - uses: actions/setup-go@v4
-
     - name: Build
       run: go build -v ./...
 
@@ -21,6 +19,5 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - uses: actions/setup-go@v4
-
     - name: Test
       run: go test -v ./...
